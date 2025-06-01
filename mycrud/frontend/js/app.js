@@ -109,7 +109,7 @@ $(document).ready(function ($) {
                 $('#age').val(datan);
                 $('#phone').val(res.data.telefon);
                 $('#cnp').val(res.data.cnp);
-                //$('#poza').val(res.data.poza);
+                $('#poza').val(res.data.poza);
                 if(res.data.poza){
                     $("#myphoto").css('display','inline');
                     $("#myphoto").attr("src", "../backend/dist/uploads/" + res.data.poza);
