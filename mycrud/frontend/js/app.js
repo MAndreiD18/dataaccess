@@ -57,7 +57,13 @@ $(document).ready(function ($) {
                 { 
                     "data": "poza",
                     render:function (data) {
-                        return '<img src="../backend/dist/uploads/' +data+ ' " style="max-width:150px" />';
+                       if(data == null ){
+                            return 'No Image';
+                       }
+                            else{
+                            return '<img src="../backend/dist/uploads/' +data+ ' " style="max-width:150px" />';
+                            }
+                        
                     }
                 },
                 {
@@ -144,6 +150,8 @@ $(document).ready(function ($) {
             });
         }
     });
+
+    
     $('#userInserUpdateForm').submit(function () {
         // ajax
         var idValue = document.getElementById("id").value;
